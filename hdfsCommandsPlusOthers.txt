@@ -72,3 +72,7 @@ https://stackoverflow.com/questions/49021954/how-to-remove-dangling-images-in-do
 https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/HDFSCommands.html#datanode
 https://community.hortonworks.com/questions/97334/warn-hdfsdfsclient-dfsoutputstreamjavarun661-datas.html
 https://community.cloudera.com/t5/Storage-Random-Access-HDFS/Every-cluster-restart-the-Name-Service-in-safe-mode-an-hour/td-p/41990
+
+
+
+docker exec -it /hive-metastore hive -S -e "select count(*) from client_pohjola_dept1_data_spec_rim.ds_0001;"
