@@ -5,3 +5,7 @@ hdfs dfs -put -f test_100000.csv hdfs://192.168.99.100:8020/data_hub/data/lake/c
 
 hdfs dfs -touchz hdfs://192.168.99.100:8020/data_hub/data/lake/client-pohjola/dept1/data_spec_rim/raw/ds_0001/_CUSTOM
 hdfs dfs -put -f rim_1MM.csv hdfs://192.168.99.100:8020/data_hub/data/lake/client-pohjola/dept1/data_spec_rim/raw/ds_0001/
+
+
+
+https://we.tl/dNnRDKmwKs
