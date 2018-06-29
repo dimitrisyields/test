@@ -1,0 +1,74 @@
+hdfs dfs -mkdir -p hdfs://192.168.99.100:8020/data_hub/data/lake/client-pohjola/dept1/data_spec_rim2/raw/ds_0001
+hdfs dfs -mkdir -p hdfs://192.168.99.100:8020/data_hub/data/lake/client-pohjola/dept1/data_spec_rim2/raw/ds_0002
+
+hdfs dfs -put -f test_100000.csv hdfs://192.168.99.100:8020/data_hub/data/lake/client-pohjola/dept1/data_spec_test/raw/ds_0001/
+
+hdfs dfs -touchz hdfs://192.168.99.100:8020/data_hub/data/lake/client-pohjola/dept1/data_spec_rim/raw/ds_0001/_CUSTOM
+hdfs dfs -put -f rim_1MM.csv hdfs://192.168.99.100:8020/data_hub/data/lake/client-pohjola/dept1/data_spec_rim/raw/ds_0001/
+
+
+
+
+root@4753c673d5b8:/# hdfs dfsadmin -report
+Configured Capacity: 100054065152 (93.18 GB
+Present Capacity: 49604836272 (46.20 GB)
+DFS Remaining: 25266151424 (23.53 GB)
+DFS Used: 24338684848 (22.67 GB)
+DFS Used%: 49.07%
+Under replicated blocks: 191
+Blocks with corrupt replicas: 0
+Missing blocks: 0
+Missing blocks (with replication factor 1):
+
+-------------------------------------------
+Live datanodes (1):
+
+Name: 172.18.0.7:50010 (datanode.datalake)
+Hostname: datanode
+Decommission Status : Normal
+Configured Capacity: 100054065152 (93.18 GB
+DFS Used: 24338684848 (22.67 GB)
+Non DFS Used: 45240247376 (42.13 GB)
+DFS Remaining: 25266151424 (23.53 GB)
+DFS Used%: 24.33%
+DFS Remaining%: 25.25%
+Configured Cache Capacity: 0 (0 B)
+Configured Cache Capacity: 0 (0 B)
+Cache Used: 0 (0 B)
+Cache Remaining: 0 (0 B)
+Cache Used%: 100.00%
+Cache Remaining%: 0.00%
+Xceivers: 1
+
+Last contact: Thu Jun 28 17:52:16 UTC 2018
+
+
+
+
+
+
+VBoxManage clonehd "source.vmdk" "cloned.vdi" --format vdi
+VBoxManage modifyhd "cloned.vdi" --resize 51200
+VBoxManage clonehd "cloned.vdi" "resized.vmdk" --format vmdk
+
+
+
+
+
+            "Env": [
+                "HTTP_PROXY=http://193.66.174.40:8080",
+                "HTTPS_PROXY=http://193.66.174.40:8080",
+                "NO_PROXY=10.132.208.182"
+            ],
+			
+			
+			
+https://gparted.org/liveusb.php
+https://stackoverflow.com/questions/1125968/how-do-i-force-git-pull-to-overwrite-local-files
+https://stackoverflow.com/questions/128035/how-do-i-pull-from-a-git-repository-through-an-http-proxy/3406766#3406766
+https://www.groovypost.com/howto/virtualbox-error-uuid-hard-disk/
+https://stackoverflow.com/questions/11659005/how-to-resize-a-virtualbox-vmdk-file
+https://stackoverflow.com/questions/49021954/how-to-remove-dangling-images-in-docker
+https://hadoop.apache.org/docs/r2.7.1/hadoop-project-dist/hadoop-hdfs/HDFSCommands.html#datanode
+https://community.hortonworks.com/questions/97334/warn-hdfsdfsclient-dfsoutputstreamjavarun661-datas.html
+https://community.cloudera.com/t5/Storage-Random-Access-HDFS/Every-cluster-restart-the-Name-Service-in-safe-mode-an-hour/td-p/41990
