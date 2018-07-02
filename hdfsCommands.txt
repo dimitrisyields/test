@@ -10,3 +10,5 @@ hdfs dfs -put -f rim_1MM.csv hdfs://192.168.99.100:8020/data_hub/data/lake/clien
 
 https://we.tl/dNnRDKmwKs
 https://we.tl/qxmyhvYNHr
+
+https://we.tl/pXupBSZyNC
