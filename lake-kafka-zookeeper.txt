@@ -1,0 +1,18 @@
+PS C:\Users\Administrator> docker logs data-lake --tail 5
+17:27:48.156 [io.yields.stream.datalake-33815349-b198-4ef7-8563-b307e79cde5d-StreamThread-1] DEBUG org.apache.kafka.clients.NetworkClient  - [Consumer clientId.yields.stream.datalake] Sending metadata request (type=MetadataRequest, topics=<ALL>) to node kafka:9092 (id: 1002 rack: null)
+17:27:48.258 [io.yields.stream.datalake-33815349-b198-4ef7-8563-b307e79cde5d-StreamThread-1] DEBUG org.apache.kafka.clients.NetworkClient  - [Consumer clientId.yields.stream.datalake] Sending metadata request (type=MetadataRequest, topics=<ALL>) to node kafka:9092 (id: 1002 rack: null)
+17:27:48.360 [io.yields.stream.datalake-33815349-b198-4ef7-8563-b307e79cde5d-StreamThread-1] DEBUG org.apache.kafka.clients.NetworkClient  - [Consumer clientId.yields.stream.datalake] Sending metadata request (type=MetadataRequest, topics=<ALL>) to node kafka:9092 (id: 1002 rack: null)
+17:27:48.460 [io.yields.stream.datalake-33815349-b198-4ef7-8563-b307e79cde5d-StreamThread-1] DEBUG org.apache.kafka.clients.NetworkClient  - [Consumer clientId.yields.stream.datalake] Sending metadata request (type=MetadataRequest, topics=<ALL>) to node kafka:9092 (id: 1002 rack: null)
+17:27:48.562 [io.yields.stream.datalake-33815349-b198-4ef7-8563-b307e79cde5d-StreamThread-1] DEBUG org.apache.kafka.clients.NetworkClient  - [Consumer clientId.yields.stream.datalake] Sending metadata request (type=MetadataRequest, topics=<ALL>) to node kafka:9092 (id: 1002 rack: null)
+PS C:\Users\Administrator> docker logs kafka --tail 5
+[2018-10-11 16:46:15,157] INFO [GroupMetadataManager brokerId=1002] Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2018-10-11 16:56:15,155] INFO [GroupMetadataManager brokerId=1002] Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2018-10-11 17:06:15,156] INFO [GroupMetadataManager brokerId=1002] Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2018-10-11 17:16:15,157] INFO [GroupMetadataManager brokerId=1002] Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+[2018-10-11 17:26:15,156] INFO [GroupMetadataManager brokerId=1002] Removed 0 expired offsets in 0 milliseconds. (kafka.coordinator.group.GroupMetadataManager)
+PS C:\yields\platform-hdfs-client> docker logs zookeeper --tail 5
+2018-10-11 14:58:59,730 [myid:] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
+2018-10-11 15:58:59,727 [myid:] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@138] - Purge task started.
+2018-10-11 15:58:59,727 [myid:] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
+2018-10-11 16:58:59,730 [myid:] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@138] - Purge task started.
+2018-10-11 16:58:59,730 [myid:] - INFO  [PurgeTask:DatadirCleanupManager$PurgeTask@144] - Purge task completed.
