@@ -1,0 +1,82 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20181017152001
+Username: OPCXVASRV01\Administrator
+RunAs User: OPCXVASRV01\Administrator
+Machine: OPCXVASRV01 (Microsoft Windows NT 10.0.14393.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command if((Get-ExecutionPolicy ) -ne 'AllSigned') { Set-ExecutionPolicy -Scope Process Bypass }; & 'C:\yields\auxiliary-binaries-and-scripts\powershell\test-write-output-docker.ps1'
+Process ID: 20076
+PSVersion: 5.1.14393.2273
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.14393.2273
+BuildVersion: 10.0.14393.2273
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is C:\yields\auxiliary-binaries-and-scripts\powershell\test-write-output-docker.txt
+Invoke yields env for Docker
+[NbConvertApp] Converting notebook op_notebooks/feature_extraction.ipynb to html
+[NbConvertApp] Executing notebook with kernel: python3
+Warning: Ignoring non-spark config property: hive.metastore.uris=thrift://hive-metastore:9083
+2018-10-17 12:20:15 WARN  NativeCodeLoader:62 - Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+2018-10-17 12:20:21 WARN  Utils:66 - Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.debug.maxToStringFields' in SparkEnv.conf.
+
+[Stage 0:>   (0 + 0) / 29][Stage 1:>   (0 + 0) / 29][Stage 3:>   (0 + 0) / 29][NbConvertApp] ERROR | Timeout waiting for execute reply (30s).
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/preprocessors/execute.py", line 423, in _wait_for_reply
+    msg = self.kc.shell_channel.get_msg(timeout=timeout)
+  File "/opt/y-runtime/conda/envs/yields-dev-ds/lib/python3.6/site-packages/jupyter_client/blocking/channels.py", line 57, in get_msg
+    raise Empty
+queue.Empty
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/bin/jupyter-nbconvert", line 11, in <module>
+    sys.exit(main())
+  File "/opt/y-runtime/conda/envs/yields-dev-ds/lib/python3.6/site-packages/jupyter_core/application.py", line 266, in launch_instance
+    return super(JupyterApp, cls).launch_instance(argv=argv, **kwargs)
+  File "/opt/y-runtime/conda/envs/yields-dev-ds/lib/python3.6/site-packages/traitlets/config/application.py", line 658, in launch_instance
+    app.start()
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/nbconvertapp.py", line 337, in start
+    self.convert_notebooks()
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/nbconvertapp.py", line 507, in convert_notebooks
+    self.convert_single_notebook(notebook_filename)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/nbconvertapp.py", line 478, in convert_single_notebook
+    output, resources = self.export_single_notebook(notebook_filename, resources, input_buffer=input_buffer)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/nbconvertapp.py", line 407, in export_single_notebook
+    output, resources = self.exporter.from_filename(notebook_filename, resources=resources)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/exporters/exporter.py", line 178, in from_filename
+    return self.from_file(f, resources=resources, **kw)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/exporters/exporter.py", line 196, in from_file
+    return self.from_notebook_node(nbformat.read(file_stream, as_version=4), resources=resources, **kw)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/exporters/html.py", line 95, in from_notebook_node
+    output, resources = super(HTMLExporter, self).from_notebook_node(nb, resources, **kw)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/exporters/templateexporter.py", line 300, in from_notebook_node
+    nb_copy, resources = super(TemplateExporter, self).from_notebook_node(nb, resources, **kw)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/exporters/exporter.py", line 138, in from_notebook_node
+    nb_copy, resources = self._preprocess(nb_copy, resources)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/exporters/exporter.py", line 315, in _preprocess
+    nbc, resc = preprocessor(nbc, resc)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/preprocessors/base.py", line 47, in __call__
+    return self.preprocess(nb, resources)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/preprocessors/execute.py", line 361, in preprocess
+    nb, resources = super(ExecutePreprocessor, self).preprocess(nb, resources)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/preprocessors/base.py", line 69, in preprocess
+    nb.cells[index], resources = self.preprocess_cell(cell, resources, index)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/preprocessors/execute.py", line 376, in preprocess_cell
+    reply, outputs = self.run_cell(cell, cell_index)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/preprocessors/execute.py", line 447, in run_cell
+    exec_reply = self._wait_for_reply(msg_id, cell)
+  File "/usr/local/lib/python3.6/dist-packages/nbconvert/preprocessors/execute.py", line 436, in _wait_for_reply
+    raise exception("Cell execution timed out")
+TimeoutError: Cell execution timed out
+write after notebook exec
+**********************
+Windows PowerShell transcript end
+End time: 20181017152101
+**********************
