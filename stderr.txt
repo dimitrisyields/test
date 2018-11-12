@@ -1,0 +1,2 @@
+Spark Executor Command: "/usr/lib/jvm/java-8-openjdk-amd64//bin/java" "-cp" "/home/yields/spark/conf/:/home/yields/spark/jars/*" "-Xmx30720M" "-Dspark.driver.port=34693" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "spark://CoarseGrainedScheduler@2fe848681309:34693" "--executor-id" "0" "--hostname" "172.18.0.9" "--cores" "8" "--app-id" "app-20181106062614-0013" "--worker-url" "spark://Worker@172.18.0.9:32985"
+========================================
