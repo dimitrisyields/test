@@ -1,0 +1,41 @@
+[0;31m[0m
+[0;31mKeyError[0mTraceback (most recent call last)
+[0;32m<ipython-input-20-c70fe65d460c>[0m in [0;36m<module>[0;34m[0m
+[1;32m     74[0m [0;34m[0m[0m
+[1;32m     75[0m     [0;31m# Save the model[0m[0;34m[0m[0;34m[0m[0m
+[0;32m---> 76[0;31m     [0mmodel[0m[0;34m.[0m[0msave[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m     77[0m [0;34m[0m[0m
+[1;32m     78[0m     [0mtime[0m [0;34m=[0m [0mdate[0m[0;34m.[0m[0mtoday[0m[0;34m([0m[0;34m)[0m[0;34m.[0m[0mstrftime[0m[0;34m([0m[0;34m"%Y-%m-%d"[0m[0;34m)[0m[0;34m.[0m[0mreplace[0m[0;34m([0m[0;34m"-0"[0m[0;34m,[0m [0;34m"-"[0m[0;34m)[0m[0;34m[0m[0m
+
+[0;32m/opt/y-runtime/conda/envs/yields-dev-ds/lib/python3.6/site-packages/y_platform/orchestration/model.py[0m in [0;36msave[0;34m(self)[0m
+[1;32m    122[0m     [0;32mdef[0m [0msave[0m[0;34m([0m[0mself[0m[0;34m)[0m [0;34m->[0m [0;32mNone[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    123[0m [0;34m[0m[0m
+[0;32m--> 124[0;31m         [0mregistry[0m[0;34m.[0m[0msaveModelInstance[0m[0;34m([0m[0mself[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    125[0m [0;34m[0m[0m
+[1;32m    126[0m     [0;31m#[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/opt/y-runtime/conda/envs/yields-dev-ds/lib/python3.6/site-packages/utils/registry.py[0m in [0;36msaveModelInstance[0;34m(model)[0m
+[1;32m    477[0m [0;31m# save a trained model instance to checkpoint[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    478[0m [0;32mdef[0m [0msaveModelInstance[0m[0;34m([0m[0mmodel[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--> 479[0;31m     [0mMODELS_LOCATION[0m [0;34m=[0m [0mos[0m[0;34m.[0m[0menviron[0m[0;34m[[0m[0;34m"MODELS_LOCATION"[0m[0;34m][0m[0;34m[0m[0m
+[0m[1;32m    480[0m     [0msave_dir[0m [0;34m=[0m [0;34mf"{MODELS_LOCATION}/{model.mc._mid}/{model.mc._id}"[0m[0;34m[0m[0m
+[1;32m    481[0m     [0;32mif[0m [0;32mnot[0m [0mos[0m[0;34m.[0m[0mpath[0m[0;34m.[0m[0mexists[0m[0;34m([0m[0msave_dir[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+
+[0;32m/usr/lib/python3.6/os.py[0m in [0;36m__getitem__[0;34m(self, key)[0m
+[1;32m    667[0m         [0;32mexcept[0m [0mKeyError[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    668[0m             [0;31m# raise KeyError with the original key value[0m[0;34m[0m[0;34m[0m[0m
+[0;32m--> 669[0;31m             [0;32mraise[0m [0mKeyError[0m[0;34m([0m[0mkey[0m[0;34m)[0m [0;32mfrom[0m [0;32mNone[0m[0;34m[0m[0m
+[0m[1;32m    670[0m         [0;32mreturn[0m [0mself[0m[0;34m.[0m[0mdecodevalue[0m[0;34m([0m[0mvalue[0m[0;34m)[0m[0;34m[0m[0m
+[1;32m    671[0m [0;34m[0m[0m
+
+[0;31mKeyError[0m: 'MODELS_LOCATION'
+KeyError: 'MODELS_LOCATION'
+
+Read params from outputed .csv
+Parameters file was not found
+PS>$global:?
+True
+**********************
+Windows PowerShell transcript end
+End time: 20181121145005
+**********************
